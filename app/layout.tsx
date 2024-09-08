@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 
-const OpenSansRegular = localFont({ src: './fonts/OpenSans-Regular.ttf' })
+// const OpenSansRegular = localFont({ src: './fonts/OpenSans-Regular.ttf' })
 
 const MarkProRegular = localFont({ src: './fonts/Mark Pro/Mark Pro.ttf' })
 
