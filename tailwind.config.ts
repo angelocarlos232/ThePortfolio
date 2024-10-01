@@ -13,7 +13,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         white: {
           default: '#f5f3f0',
-          secondary: '#c3bdb4'
+          secondary: '#c3bdb4',
+          tertiary: '#f0f0f0'
         },
         gray: {
           default: '#d4d2cf',
