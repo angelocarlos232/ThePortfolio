@@ -18,7 +18,7 @@ export default function Home() {
           <section className="min-h-screen flex items-center justify-center">
             <Workflow />
           </section>
-          <section className=" flex items-center justify-center h-screen">
+          <section className="flex items-center justify-center">
             <ExperienceSection />
           </section>
         </div>
