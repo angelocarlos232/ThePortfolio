@@ -2,6 +2,7 @@ import AboutSection from "@/components/about/AboutSection";
 import Hero from "@/components/navbar/NavigationBar";
 import Workflow from "@/components/workflow/Workflow";
 import ExperienceSection from "@/components/experience/layout";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center justify-center">
@@ -18,10 +19,13 @@ export default function Home() {
           <section className="min-h-screen flex items-center justify-center">
             <Workflow />
           </section>
-          <section className="flex items-center justify-center">
+          <section className="flex items-center justify-center ">
             <ExperienceSection />
           </section>
         </div>
+      </div>
+      <div className="pt-12">
+        <Footer />
       </div>
     </main>
   );

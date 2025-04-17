@@ -2,8 +2,7 @@ import React from "react";
 import { Title } from "../ui/title";
 import { Description } from "../ui/description";
 import { Text } from "../ui/text";
-import Image from "next/image";
-import SampleImage from "@/app/assets/image.png";
+import ProjectCarousel from './ProjectCarousel';
 
 const ExperienceSection = () => {
   const experiences = [
@@ -27,13 +26,15 @@ const ExperienceSection = () => {
 
   const technologies = [
     "React",
+    "MongoDB",
+    "Express",
+    "Node",
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
     "HTML",
     "CSS",
     "JavaScript",
-    "jQuery",
   ];
 
   const years = ["2021", "2022", "2023", "2024"];
@@ -91,39 +92,7 @@ const ExperienceSection = () => {
         // */}
 
         <div className="col-span-2 pl-20 pt-24 h-screen ">
-          <div className="">
-            <div className="flex justify-between w-full border-b-2 border-gray-400 border-dashed pb-2 mb-8">
-              <div className="flex items-baseline">
-                <Text variant="medium" className="text-gray-500 mr-2">
-                  /2023
-                </Text>
-                <Title variant="secondary" size="small">
-                  Scorelab AI
-                </Title>
-              </div>
-              <div className="flex gap-2 items-center">
-                {["Next.js", "Express.js", "VectorDB"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <Description>
-              Supercharge your learning with Scorelab, an AI-powered learning
-              platform.
-            </Description>
-            <div className="mt-6">
-              <Image
-                className="rounded-2xl shadow-lg"
-                src={SampleImage}
-                alt="Scorelab AI Screenshot"
-              />
-            </div>
-          </div>
+          <ProjectCarousel />
         </div>
       </div>
     </div>
