@@ -42,7 +42,7 @@ const ExperienceSection = () => {
     <div className="bg-white p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg w-full">
       <div className="flex justify-end border-b-2 border-gray-200 pb-4 w-full">
         <Title size="large" variant="secondary">
-          Personal Experiments
+          Personal Projects
         </Title>
       </div>
       <div className="grid grid-cols-3">
