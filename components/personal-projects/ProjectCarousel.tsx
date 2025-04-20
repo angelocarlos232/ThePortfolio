@@ -125,13 +125,13 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                   <div className="absolute bottom-4 right-4 flex gap-2">
                     <button
                       onClick={() => handlePrevImage(project.id, totalImages)}
-                      className="bg-gray-800 text-white px-3 py-1 rounded-full"
+                      className="bg-[#f3f4f6] text-white px-3 py-1 rounded-full"
                     >
                       ←
                     </button>
                     <button
                       onClick={() => handleNextImage(project.id, totalImages)}
-                      className="bg-gray-800 text-white px-3 py-1 rounded-full"
+                      className="bg-[#f3f4f6] text-white px-3 py-1 rounded-full"
                     >
                       →
                     </button>

@@ -85,8 +85,8 @@ const PersonalProjectsLayout = () => {
                 BY TECHNOLOGY:
               </Text>
               {technologies.map((tech, index) => (
-                <div key={tech} className="flex items-center mb-2 gap-16">
-                  <span className="text-gray-500 ">
+                <div key={tech} className="flex items-center mb-2">
+                  <span className="text-gray-500 w-16 font-mono">
                     /{index.toString().padStart(2, "0")}
                   </span>
                   <span
@@ -107,8 +107,8 @@ const PersonalProjectsLayout = () => {
                 BY YEAR:
               </Text>
               {years.map((year, index) => (
-                <div key={year} className="flex items-center mb-2 gap-16">
-                  <span className="text-gray-500 ">
+                <div key={year} className="flex items-center mb-2">
+                  <span className="text-gray-500 w-16 font-mono">
                     /{index.toString().padStart(2, "0")}
                   </span>
                   <span
