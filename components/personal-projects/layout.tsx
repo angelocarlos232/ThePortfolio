@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Title } from "../ui/title";
 import { Description } from "../ui/description";
 import { Text } from "../ui/text";
@@ -8,6 +8,23 @@ const PersonalProjectsLayout = () => {
   // Add state for selected filters
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile device on mount and on resize
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Set initial value
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup event listener
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   // Handle filter selection
   const handleTechSelect = (tech: string) => {
@@ -63,13 +80,16 @@ const PersonalProjectsLayout = () => {
 
   return (
     <div className="bg-white p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg w-full">
-      <div className="flex justify-end border-b-2 border-gray-200 pb-12 w-full">
+      <div className="flex justify-center md:justify-end border-b-2 border-gray-200 pb-6 md:pb-12 w-full">
         <Title size="large" variant="secondary">
           Personal Projects
         </Title>
       </div>
-      <div className="grid grid-cols-3">
-        <div className="col-span-1 border-r-2 border-gray-200  pt-24">
+      
+      {/* Main content - grid on desktop, single column on mobile */}
+      <div className={isMobile ? "" : "grid grid-cols-3"}>
+        {/* Index section - Hidden on mobile */}
+        <div className={`${isMobile ? 'hidden' : 'block'} col-span-1 border-r-2 border-gray-200 pt-24`}>
           <div className="w-4/5">
             <Title variant="accent" className="mb-12">
               Index.
@@ -138,11 +158,8 @@ const PersonalProjectsLayout = () => {
           </div>
         </div>
 
-        {/* //
-        //
-        // */}
-
-        <div className="col-span-2 pl-20 pt-24 h-screen ">
+        {/* Carousel section - Full width on mobile, 2/3 on desktop */}
+        <div className={`${isMobile ? 'w-full pt-6' : 'h-[80vh] col-span-2 pl-20 pt-24'}`}>
           <ProjectCarousel
             selectedTech={selectedTech}
             selectedYear={selectedYear}

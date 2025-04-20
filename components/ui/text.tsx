@@ -7,9 +7,9 @@ interface TextProps {
 }
 
 const textVariants = {
-  small: 'text-sm leading-4',
-  medium: 'text-base tracking-tight font-[600]',
-  large: 'text-xl leading-7',
+  small: 'text-xs sm:text-sm leading-4',
+  medium: 'text-sm sm:text-base tracking-tight font-[600]',
+  large: 'text-base sm:text-lg md:text-xl leading-6 md:leading-7',
 };
 
 export const Text: React.FC<TextProps> = ({ variant = 'medium', children, className = '' }) => {

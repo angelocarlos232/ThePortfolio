@@ -22,33 +22,33 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div
-      className="grid grid-cols-[1fr_2px_3fr] p-10 rounded-lg gap-4 items-start hover:cursor-pointer hover:scale-105 hover:bg-[#f3f4f6] transition-all duration-300"
+      className="grid grid-cols-1 md:grid-cols-[1fr_2px_3fr] p-5 sm:p-8 md:p-10 rounded-lg gap-4 items-start hover:cursor-pointer hover:bg-[#f3f4f6] transition-all duration-300"
       onClick={() => {
-        window.open(url, "_blank");
+        if (url) window.open(url, "_blank");
       }}
     >
-      {/* Left Column: Year Duration */}
-      <div className="text-left">
-        <Text>{years}</Text>
+      {/* Left Column: Year Duration - Full width on mobile, in own column on desktop */}
+      <div className="text-center md:text-left mb-3 md:mb-0">
+        <Text className="font-bold md:font-normal">{years}</Text>
       </div>
 
-      {/* Middle Border */}
-      <div className="h-full bg-gray-200"></div>
+      {/* Middle Border - Hidden on mobile */}
+      <div className="hidden md:block h-full bg-gray-200"></div>
 
       {/* Right Column: Job Details */}
       <div>
-        <Title size="medium">{title}</Title>
+        <Title size="medium" className="text-center md:text-left">{title}</Title>
         {company && (
-          <Text className="text-sm text-gray-600 mt-1">{company}</Text>
+          <Text className="text-center md:text-left text-sm text-gray-600 mt-1">{company}</Text>
         )}
-        <ul className="mt-2 list-disc pl-5">
+        <ul className="mt-4 list-disc pl-5">
           {description.map((desc, index) => (
-            <li key={index} className="mt-1">
+            <li key={index} className="mt-2">
               <Description>{desc}</Description>
             </li>
           ))}
         </ul>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
           {skills.map((skill, index) => (
             <span
               key={index}

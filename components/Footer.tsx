@@ -2,23 +2,23 @@ import React from "react";
 
 /**
  * Footer component displaying social links and technology information
- * Designed to match the provided example image
+ * Designed to be responsive on all screen sizes
  */
 const Footer = () => {
   return (
     <footer
-      className="bg-white text-[#1d191a] p-6 w-full border-t border-gray-200"
-      style={{ height: "200px" }}
+      className="bg-white text-[#1d191a] p-4 sm:p-6 w-full border-t border-gray-200"
     >
-      <div className="flex mx-[15vw] h-full ">
-        <div className="flex flex-col md:flex-row justify-between items-center h-full gap-64">
+      <div className="flex flex-col mx-4 sm:mx-[5vw] md:mx-[10vw] lg:mx-[15vw] py-4 sm:py-6">
+        <div className="flex flex-col space-y-6 md:flex-row md:justify-between md:items-start md:space-y-0 md:gap-8 lg:gap-16 xl:gap-24">
           {/* Social Media Icons */}
-          <div className="flex space-x-6 mb-4 md:mb-0">
+          <div className="flex justify-center md:justify-start space-x-6 mb-4 md:mb-0">
             <a
               href="https://github.com/angelocarlos232"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1d191a] hover:text-gray-600"
+              className="text-[#1d191a] hover:text-gray-600 transition-colors"
+              aria-label="GitHub"
             >
               <svg
                 className="h-6 w-6"
@@ -37,7 +37,8 @@ const Footer = () => {
               href="https://www.linkedin.com/in/christian-angelo-carlos-7b0726298/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1d191a] hover:text-gray-600"
+              className="text-[#1d191a] hover:text-gray-600 transition-colors"
+              aria-label="LinkedIn"
             >
               <svg
                 className="h-6 w-6"
@@ -53,7 +54,8 @@ const Footer = () => {
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1d191a] hover:text-gray-600"
+              className="text-[#1d191a] hover:text-gray-600 transition-colors"
+              aria-label="Google"
             >
               <svg
                 className="h-6 w-6"
@@ -85,8 +87,8 @@ const Footer = () => {
           </div>
 
           {/* Tools Information */}
-          <div className="text-sm text-gray-600 text-center md:text-right">
-            <p className="mb-2 text-justify">
+          <div className="text-sm text-gray-600">
+            <p className="text-center md:text-left">
               Built with modern technologies such as Next.js and styled with
               Tailwind CSS for a seamless and responsive user experience.
               Deployed effortlessly with Vercel. All text is elegantly set in

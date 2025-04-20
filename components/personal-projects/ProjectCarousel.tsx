@@ -63,7 +63,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   if (filteredProjects.length === 0) {
     return (
       <div className="h-[10vh] flex items-center justify-center">
-        <div className="text-center p-8  rounded-lg">
+        <div className="text-center p-4 md:p-8 rounded-lg">
           <Title variant="secondary" size="small" className="mb-4">
             No projects found
           </Title>
@@ -77,17 +77,17 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   }
 
   return (
-    <div className="h-full overflow-y-auto pr-4 custom-scrollbar">
-      <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
+    <div className="h-full overflow-y-auto pr-0 md:pr-4 custom-scrollbar">
+      <div className="grid grid-cols-1 gap-8 md:gap-12 max-w-4xl mx-auto">
         {filteredProjects.map((project) => {
           const currentIndex = currentImageIndex[project.id] || 0;
           const totalImages = project.images.length;
           const currentImage = project.images[currentIndex];
 
           return (
-            <div key={project.id} className="w-full  rounded-lg p-6 shadow-sm">
-              <div className="flex flex-col md:flex-row justify-between w-full border-b-2 border-gray-400 border-dashed pb-4 mb-6">
-                <div className="flex items-baseline mb-4 md:mb-0">
+            <div key={project.id} className="w-full rounded-lg p-3 sm:p-4 md:p-6 shadow-sm">
+              <div className="flex flex-col md:flex-row justify-between w-full border-b-2 border-gray-400 border-dashed pb-3 md:pb-4 mb-4 md:mb-6">
+                <div className="flex items-baseline mb-3 md:mb-0">
                   <Text variant="medium" className="text-gray-500 mr-2">
                     /{project.year}
                   </Text>
@@ -99,7 +99,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1 rounded-full text-sm ${
+                      className={`px-2 md:px-3 py-1 rounded-full text-xs sm:text-sm ${
                         selectedTech === tech
                           ? "bg-blue-100 text-blue-700"
                           : "bg-gray-100 text-gray-700"
@@ -110,39 +110,39 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                   ))}
                 </div>
               </div>
-              <div className="mb-6">
+              <div className="mb-4 md:mb-6">
                 <Description>{project.description}</Description>
               </div>
               <div className="relative">
                 <Image
-                  className="rounded-2xl shadow-lg w-full h-auto object-cover min-h-[200px] max-h-[400px] mx-auto"
+                  className="rounded-lg md:rounded-2xl shadow-lg w-full h-auto object-cover min-h-[150px] sm:min-h-[200px] max-h-[300px] md:max-h-[400px] mx-auto"
                   src={currentImage.src}
                   alt={currentImage.alt}
                   width={800}
                   height={450}
                 />
                 {totalImages > 1 && (
-                  <div className="absolute bottom-4 right-4 flex gap-2">
+                  <div className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 flex gap-1 sm:gap-2">
                     <button
                       onClick={() => handlePrevImage(project.id, totalImages)}
-                      className="bg-[#f3f4f6] text-white px-3 py-1 rounded-full"
+                      className="bg-[#f3f4f6] text-black px-2 sm:px-3 py-1 rounded-full text-sm md:text-base"
                     >
                       ←
                     </button>
                     <button
                       onClick={() => handleNextImage(project.id, totalImages)}
-                      className="bg-[#f3f4f6] text-white px-3 py-1 rounded-full"
+                      className="bg-[#f3f4f6] text-black px-2 sm:px-3 py-1 rounded-full text-sm md:text-base"
                     >
                       →
                     </button>
                   </div>
                 )}
                 {totalImages > 1 && (
-                  <div className="absolute bottom-4 left-4 flex gap-1">
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 flex gap-1">
                     {project.images.map((_, index) => (
                       <span
                         key={index}
-                        className={`w-2 h-2 rounded-full ${
+                        className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${
                           index === currentIndex ? "bg-blue-500" : "bg-gray-300"
                         }`}
                       />

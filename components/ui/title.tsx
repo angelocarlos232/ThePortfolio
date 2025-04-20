@@ -23,9 +23,9 @@ export const Title: React.FC<TitleProps> = ({
   };
 
   const sizeStyles = {
-    small: 'text-2xl',
-    medium: 'text-4xl',
-    large: 'text-6xl',
+    small: 'text-xl md:text-2xl',
+    medium: 'text-2xl md:text-3xl lg:text-4xl',
+    large: 'text-3xl md:text-4xl lg:text-5xl xl:text-6xl',
   };
 
   return (
