@@ -62,7 +62,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   // Display a message if no projects match the filters
   if (filteredProjects.length === 0) {
     return (
-      <div className="h-[80vh] flex items-center justify-center">
+      <div className="h-[10vh] flex items-center justify-center">
         <div className="text-center p-8  rounded-lg">
           <Title variant="secondary" size="small" className="mb-4">
             No projects found
@@ -76,7 +76,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   }
 
   return (
-    <div className="h-[77vh] overflow-y-auto pr-4 custom-scrollbar">
+    <div className="h-full overflow-y-auto pr-4 custom-scrollbar">
       <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
         {filteredProjects.map((project) => {
           const currentIndex = currentImageIndex[project.id] || 0;
