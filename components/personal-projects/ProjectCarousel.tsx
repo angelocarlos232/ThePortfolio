@@ -68,7 +68,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
             No projects found
           </Title>
           <Description>
-            No projects match the selected filter. Try selecting a different filter.
+            No projects match the selected filter. Try selecting a different
+            filter.
           </Description>
         </div>
       </div>

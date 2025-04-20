@@ -45,7 +45,7 @@ export const projects = [
     id: "formPDF",
     title: "FormPDF",
     description: "A utility for creating and managing PDF forms.",
-    technologies: ["Node.js", "TypeScript", "Tailwind CSS", "HTML", "CSS"],
+    technologies: ["Node.js", "TypeScript", "Tailwind CSS", "HTML", "CSS", "Next.js"],
     year: "2025",
     images: pictures.formPDF,
   },

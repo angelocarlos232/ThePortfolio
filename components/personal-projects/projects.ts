@@ -28,7 +28,7 @@ export const projects = [
     name: "FormPDF",
     description:
       "A web application that converts pdf forms into a form that can be filled out then be pasted into the original pdf by using canvas manipulation.",
-    technologies: ["React.js", "Tailwind CSS", "JavaScript"],
+    technologies: ["React.js", "Tailwind CSS", "JavaScript", "Next.js"],
     year: "2025",
     pictures: pictures.formPDF,
   },
