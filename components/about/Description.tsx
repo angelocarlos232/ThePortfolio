@@ -4,7 +4,7 @@ const Description = () => {
   return (
     <div className="min-h-[300px] md:min-h-[500px]">
       <div className="flex flex-col items-center justify-center relative w-full h-full">
-        <div className="self-end mr-2 mb-4">
+        <div className="lg:self-end md:self-start sm:self-start mr-2 mb-4">
           <h2 className="text-lg md:text-xl font-bold border-2 border-gray-default py-2 md:py-3 px-4 md:px-6 rounded-full text-black-default">
             JUNIOR
           </h2>
