@@ -32,7 +32,7 @@ export const Title: React.FC<TitleProps> = ({
     <h1 className={`
       font-black
       tracking-wider 
-      ${variantStyles[variant]} 
+      ${variantStyles[variant as keyof typeof variantStyles]} 
       ${sizeStyles[size]} 
       ${className}
     `}>

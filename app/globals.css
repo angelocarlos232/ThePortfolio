@@ -14,3 +14,26 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar for minimalistic look */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray track for subtle appearance */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c0c0c0; /* Slightly darker thumb for contrast */
+  border-radius: 3px; /* Rounded edges for a softer look */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0; /* Darker on hover for interactivity */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f1f1f1; /* Thumb and track colors */
+}

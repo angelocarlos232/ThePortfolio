@@ -18,7 +18,7 @@ const Description = () => {
           </h1>
           <div className="grid grid-cols-2 gap-12 text-gray-500 text-sm font-medium text-justify">
             <p className="col-span-1">
-              Hello there! I'm Angelo Carlos, a Junior Frontend Developer
+              Hello there! I&apos;m Angelo Carlos, a Junior Frontend Developer
               dedicated to crafting engaging and visually appealing user
               experiences. My passion lies in combining aesthetics with
               functionality to build intuitive and interactive web applications.

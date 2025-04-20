@@ -29,7 +29,7 @@ export const projects = [
     description:
       "A web application that converts pdf forms into a form that can be filled out then be pasted into the original pdf by using canvas manipulation.",
     technologies: ["React.js", "Tailwind CSS", "JavaScript"],
-    year: "2022",
+    year: "2025",
     pictures: pictures.formPDF,
   },
 ];
