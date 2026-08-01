@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import profilePic from '@/app/assets/profile-pic.jpeg';
+import Image from "next/image";
+import profilePic from "@/app/assets/profile-pic.jpeg";
 
 const ImageHolder = () => {
   return (

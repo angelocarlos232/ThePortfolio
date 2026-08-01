@@ -85,7 +85,10 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
           const currentImage = project.images[currentIndex];
 
           return (
-            <div key={project.id} className="w-full rounded-lg p-3 sm:p-4 md:p-6 shadow-sm">
+            <div
+              key={project.id}
+              className="w-full rounded-lg p-3 sm:p-4 md:p-6 shadow-sm"
+            >
               <div className="flex flex-col md:flex-row justify-between w-full border-b-2 border-gray-400 border-dashed pb-3 md:pb-4 mb-4 md:mb-6">
                 <div className="flex items-baseline mb-3 md:mb-0">
                   <Text variant="medium" className="text-gray-500 mr-2">

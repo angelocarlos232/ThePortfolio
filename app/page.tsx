@@ -190,7 +190,10 @@ export default function Home() {
             <PersonalProjectsLayout />
           </section>
         </div>
-        <div id="contact" className="flex items-center justify-center mt-20 md:mt-40 w-full px-4">
+        <div
+          id="contact"
+          className="flex items-center justify-center mt-20 md:mt-40 w-full px-4"
+        >
           <ContactLayout />
         </div>
       </div>
