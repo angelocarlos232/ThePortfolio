@@ -12,18 +12,18 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         white: {
-          default: '#f5f3f0',
-          secondary: '#c3bdb4',
-          tertiary: '#f0f0f0'
+          default: "#f5f3f0",
+          secondary: "#c3bdb4",
+          tertiary: "#f0f0f0",
         },
         gray: {
-          default: '#d4d2cf',
-          secondary: '#232121',
-          text: '#727171'
+          default: "#d4d2cf",
+          secondary: "#232121",
+          text: "#727171",
         },
         black: {
-          default: '#252323'
-        }
+          default: "#252323",
+        },
       },
     },
   },

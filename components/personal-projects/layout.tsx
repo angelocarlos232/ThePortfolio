@@ -15,15 +15,15 @@ const PersonalProjectsLayout = () => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     // Set initial value
     checkIfMobile();
-    
+
     // Add event listener for window resize
-    window.addEventListener('resize', checkIfMobile);
-    
+    window.addEventListener("resize", checkIfMobile);
+
     // Cleanup event listener
-    return () => window.removeEventListener('resize', checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
   // Handle filter selection
@@ -85,11 +85,13 @@ const PersonalProjectsLayout = () => {
           Personal Projects
         </Title>
       </div>
-      
+
       {/* Main content - grid on desktop, single column on mobile */}
       <div className={isMobile ? "" : "grid grid-cols-3"}>
         {/* Index section - Hidden on mobile */}
-        <div className={`${isMobile ? 'hidden' : 'block'} col-span-1 border-r-2 border-gray-200 pt-24`}>
+        <div
+          className={`${isMobile ? "hidden" : "block"} col-span-1 border-r-2 border-gray-200 pt-24`}
+        >
           <div className="w-4/5">
             <Title variant="accent" className="mb-12">
               Index.
@@ -159,7 +161,9 @@ const PersonalProjectsLayout = () => {
         </div>
 
         {/* Carousel section - Full width on mobile, 2/3 on desktop */}
-        <div className={`${isMobile ? 'w-full pt-6' : 'h-[80vh] col-span-2 pl-20 pt-24'}`}>
+        <div
+          className={`${isMobile ? "w-full pt-6" : "h-[80vh] col-span-2 pl-20 pt-24"}`}
+        >
           <ProjectCarousel
             selectedTech={selectedTech}
             selectedYear={selectedYear}

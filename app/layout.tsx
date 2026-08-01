@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 // const OpenSansRegular = localFont({ src: './fonts/OpenSans-Regular.ttf' })
 
-const MarkProRegular = localFont({ src: './fonts/Mark Pro/Mark Pro.ttf' })
-
+const MarkProRegular = localFont({ src: "./fonts/Mark Pro/Mark Pro.ttf" });
 
 export const metadata: Metadata = {
   title: "Angelo's Portfolio",
@@ -20,11 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      className={MarkProRegular.className}      
-      >
-        {children}
-      </body>
+      <body className={MarkProRegular.className}>{children}</body>
     </html>
   );
 }

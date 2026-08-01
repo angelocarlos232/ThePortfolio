@@ -25,7 +25,8 @@ const Description = () => {
             </p>
             <p className="col-span-1">
               With a strong foundation in HTML, CSS, and JavaScript, I strive to
-              stay up-to-date with the latest web technologies and trends, like Next.js and React.
+              stay up-to-date with the latest web technologies and trends, like
+              Next.js and React.
             </p>
           </div>
         </div>

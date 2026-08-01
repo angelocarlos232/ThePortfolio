@@ -6,9 +6,7 @@ import React from "react";
  */
 const Footer = () => {
   return (
-    <footer
-      className="bg-white text-[#1d191a] p-4 sm:p-6 w-full border-t border-gray-200"
-    >
+    <footer className="bg-white text-[#1d191a] p-4 sm:p-6 w-full border-t border-gray-200">
       <div className="flex flex-col mx-4 sm:mx-[5vw] md:mx-[10vw] lg:mx-[15vw] py-4 sm:py-6">
         <div className="flex flex-col space-y-6 md:flex-row md:justify-between md:items-start md:space-y-0 md:gap-8 lg:gap-16 xl:gap-24">
           {/* Social Media Icons */}

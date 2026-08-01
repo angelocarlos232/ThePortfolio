@@ -37,9 +37,13 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
       {/* Right Column: Job Details */}
       <div>
-        <Title size="medium" className="text-center md:text-left">{title}</Title>
+        <Title size="medium" className="text-center md:text-left">
+          {title}
+        </Title>
         {company && (
-          <Text className="text-center md:text-left text-sm text-gray-600 mt-1">{company}</Text>
+          <Text className="text-center md:text-left text-sm text-gray-600 mt-1">
+            {company}
+          </Text>
         )}
         <ul className="mt-4 list-disc pl-5">
           {description.map((desc, index) => (
